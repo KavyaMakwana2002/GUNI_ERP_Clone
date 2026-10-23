@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analytics-II | BCA Hons</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== Modern Aurora Animated Background ===== */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    min-height:100vh;
+    color:#fff;
+    background: linear-gradient(130deg,#0f0c29,#302b63,#24243e,#000428);
+    background-size: 300% 300%;
+    animation: auroraBG 18s ease infinite;
+}
+
+@keyframes auroraBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== Premium Glass Card (Floating Effect) ===== */
+.glass-card{
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 30px;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 
+        0 10px 40px rgba(0,0,0,0.5),
+        inset 0 0 15px rgba(255,255,255,0.05);
+    transition: all 0.5s ease;
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+    0%,100%{transform: translateY(0px);}
+    50%{transform: translateY(-6px);}
+}
+
+.glass-card:hover{
+    transform: scale(1.02);
+    box-shadow: 
+        0 20px 50px rgba(0,0,0,0.7),
+        0 0 30px rgba(0,255,255,0.4);
+}
+
+/* ===== Ultra Neon Unit Buttons ===== */
+.unit-btn{
+    margin:10px;
+    padding:12px 28px;
+    border-radius:50px;
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:1px;
+    border:none;
+    cursor:pointer;
+    color:white;
+    background: linear-gradient(135deg,#ff0080,#7928ca,#00f2fe);
+    background-size: 200% 200%;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(255,0,128,0.6);
+}
+
+.unit-btn:hover{
+    background-position: right center;
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(0,255,255,0.9);
+}
+
+/* ===== Modern Glass Table ===== */
+.table-custom{
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+}
+
+.table{
+    color:white;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.table thead{
+    background: linear-gradient(90deg,#ff512f,#f09819);
+    color:white;
+}
+
+.table tbody tr{
+    transition:0.3s;
+}
+
+.table tbody tr:hover{
+    background: rgba(255,255,255,0.08);
+    transform: scale(1.01);
+}
+
+/* ===== Gradient Navigation Buttons ===== */
+.btn-nav{
+    padding:14px 30px;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    color:white;
+    background: linear-gradient(45deg,#00c6ff,#0072ff);
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.btn-nav:hover{
+    transform: translateY(-6px) scale(1.08);
+    background: linear-gradient(45deg,#fc466b,#3f5efb);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* ===== Stylish Footer ===== */
+footer{
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+    padding:20px;
+    text-align:center;
+    font-size:14px;
+    letter-spacing:1px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    margin-top:60px;
+}
+
+/* ===== Smooth Fade In Animation ===== */
+.fade-in{
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container my-4">
+
+<!-- Header -->
+<div class="glass-card text-center mb-4">
+    <h2 class="fw-bold">Data Analytics-II</h2>
+    <p>BCA (Hons) – Semester II</p>
+    <p><strong>Subject Code:</strong> U32C4DA | Academic Year: 2024-25</p>
+    <p>Credits: 4 | Lecture: 2 hrs | Practical: 4 hrs | Total Marks: 100</p>
+</div>
+
+<!-- Teaching & Examination Scheme -->
+<div class="glass-card mb-4">
+<h5 class="fw-bold">Teaching & Examination Scheme</h5>
+<ul>
+<li>Lecture: 2 Hours per week</li>
+<li>Practical: 4 Hours per week</li>
+<li>Total Hours: 6</li>
+<li>Theory: CE – 50 | SEE – 50 | Total – 100 Marks</li>
+</ul>
+</div>
+
+<!-- Objective -->
+<div class="glass-card mb-4">
+<h5 class="fw-bold">Objective</h5>
+<p>The goal of the Advanced Microsoft Excel course is to help students become more proficient
+analysts and complicated data managers by exploring some of Excel's more advanced
+features. Students will investigate pivot tables and learn effective methods for condensing,
+analyzing, and presenting data. Additionally, they will learn how to use data tools for data
+translation and validation, become proficient at auditing worksheets to verify accuracy, and
+comprehend how to work cooperatively with others while safeguarding sensitive
+information.</p>
+</div>
+
+<!-- Pre-requisites -->
+<div class="glass-card mb-4">
+<h5 class="fw-bold">Pre-requisites</h5>
+<p>Students should know basic understanding of Excel.</p>
+</div>
+
+<!-- Course Outcomes -->
+<div class="glass-card mb-4">
+<h5 class="fw-bold">Course Outcomes (CO)</h5>
+<ul>
+<li><strong>CO1:</strong> Understand If data validation and analysis.</li>
+<li><strong>CO2:</strong> Understand advanced functions and formulas.</li>
+<li><strong>CO3:</strong> Demonstrate and understand how to use pivot tables to analyze data. </li>
+<li><strong>CO4:</strong> Understand advance analysis tool and data visualization.</li>
+<li><strong>CO5:</strong> Understand and build an Excel Dashboard.</li>
+</ul>
+</div>
+
+<!-- Units -->
+<div class="glass-card mb-4">
+<h5 class="fw-bold text-center mb-3">Course Content (Click Unit)</h5>
+
+<div class="text-center">
+<button class="unit-btn" onclick="showUnit(1)">Unit 1</button>
+<button class="unit-btn" onclick="showUnit(2)">Unit 2</button>
+<button class="unit-btn" onclick="showUnit(3)">Unit 3</button>
+<button class="unit-btn" onclick="showUnit(4)">Unit 4</button>
+<button class="unit-btn" onclick="showUnit(5)">Unit 5</button>
+</div>
+
+<div id="unitContent" class="mt-4"></div>
+</div>
+
+<!-- CO-PO Mapping -->
+<div class="table-custom mb-4">
+<h5 class="fw-bold">CO-PO Mapping</h5>
+<table class="table table-bordered text-center text-white">
+<thead>
+<tr>
+<th>CO</th>
+<th>PO1</th><th>PO2</th><th>PO3</th><th>PO4</th>
+<th>PO5</th><th>PO6</th><th>PO7</th><th>PO8</th>
+<th>PO9</th><th>PO10</th><th>PO11</th><th>PO12</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>CO1</td><td>3</td><td>2</td><td>3</td><td>3</td><td>3</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>2</td><td>3</td></tr>
+<tr><td>CO2</td><td>3</td><td>3</td><td>2</td><td>3</td><td>2</td><td>2</td><td>3</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>CO3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>2</td><td>1</td><td>3</td><td>3</td><td>3</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>CO4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>3</td><td>1</td><td>2</td><td>2</td><td>3</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>CO5</td><td>2</td><td>3</td><td>3</td><td>2</td><td>3</td><td>2</td><td>2</td><td>2</td><td>3</td><td>1</td><td>3</td><td>2</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Books -->
+<div class="glass-card mb-4">
+<h5 class="fw-bold">Text Book</h5>
+<p>Excel 2019 Bible by Michael Alexander and Richard Kusleika Published by Wiley, 2018.</p>
+</div>
+
+<div class="glass-card mb-4">
+<h5 class="fw-bold mt-3">Reference Books</h5>
+<p>
+Excel Data Analysis – Denise Etheridge <br>
+Microsoft Excel 2016 Data Analysis – Wayne L. Winston
+</p>
+</div>
+
+<!-- Navigation -->
+<div class="d-flex justify-content-between">
+<a href="Sem 2 sub.html" class="btn-nav">← Previous</a>
+<a href="#" class="btn-nav">Open Full Course →</a>
+</div>
+
+</div>
+
+<footer>
+© 2024-25 BCA Hons | Data Analytics-II
+</footer>
+
+<script>
+
+const units = {
+1: "If Analysis: Goal Seek, Scenario Manager, Data Tables, Solver Tool. Data Validation: Number, Date, Text, Custom Validation, Dynamic Dropdown List. <br><br> <b> (06 Hrs) </b>",
+2: "Logical Functions: IF, Nested IF, IFERROR, AND, OR. Lookup Functions: VLOOKUP, HLOOKUP, INDEX-MATCH, INDIRECT, Reverse Lookup, Helper Column. <br><br> <b> (06 Hrs) </b>",
+3: "Pivot Tables: Basic & Advanced PivotTables, Filtering, Grouping, Calculated Fields, Array Functions, Advanced Formulas. <br><br> <b> (06 Hrs) </b>",
+4: "Advanced Analysis Tools: Slicers, Timelines, Power Pivot, Power View, Power BI Integration. Charts: Bar, Pie, Line, Primary & Secondary Axis. <br><br> <b> (06 Hrs) </b>",
+5: "Excel Dashboard: Planning Dashboard, Adding Charts, Dynamic Content, KPI Dashboard Creation. <br><br> <b> (06 Hrs) </b>"
+};
+
+function showUnit(num){
+document.getElementById("unitContent").innerHTML =
+`<div class="alert alert-info text-dark">
+<h6><strong>Unit ${num} Content:</strong></h6>
+<p>${units[num]}</p>
+</div>`;
+}
+
+</script>
+
+</body>
+</html>

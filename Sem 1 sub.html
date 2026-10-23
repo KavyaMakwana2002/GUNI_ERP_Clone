@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semester 1 Subjects</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+/* ===== Modern Animated Gradient Background ===== */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height:100vh;
+
+    /* New Smooth Dark-Blue Premium Gradient */
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1e3c72);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===== Gradient Animation ===== */
+@keyframes gradientMove{
+    0%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+    100%{ background-position: 0% 50%; }
+}
+
+/* Title Styling */
+.title{
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    margin:50px 0;
+    font-size:40px;
+    letter-spacing:2px;
+    text-shadow:0 5px 15px rgba(0,0,0,0.4);
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Glass Card Design */
+.subject-card{
+    border-radius:25px;
+    transition:0.5s ease;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+    color:white;
+    cursor:pointer;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Hover Effect */
+.subject-card:hover{
+    transform: translateY(-15px) scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Glow Effect */
+.subject-card::before{
+    content:"";
+    position:absolute;
+    width:150%;
+    height:150%;
+    background:linear-gradient(45deg,transparent,rgba(255,255,255,0.3),transparent);
+    top:-100%;
+    left:-100%;
+    transform:rotate(45deg);
+    transition:0.6s;
+}
+
+.subject-card:hover::before{
+    top:100%;
+    left:100%;
+}
+
+/* Card Title */
+.card-title{
+    font-weight:bold;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+/* Modal Styling */
+.modal-content{
+    border-radius:25px;
+    background: linear-gradient(135deg,#4e73df,#1cc88a);
+    color:white;
+    text-align:center;
+}
+
+/* Modern Button */
+
+.button-group{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.button-group{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:15px;
+}
+
+.btn-modern{
+    padding:10px 20px;
+    border-radius:50px;
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+    color:white;
+    background: linear-gradient(45deg,#087a84,#490577);
+    border:none;
+    transition: all 0.4s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Hover Animation */
+.btn-modern:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg,#7e4edf45,#271cc875);
+    color:white;
+}
+
+/* Ripple Glow Effect */
+.btn-modern::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    background:rgba(141, 69, 69, 0.4);
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transition:0.5s;
+}
+
+.btn-modern:hover::after{
+    width:200px;
+    height:200px;
+    opacity:0;
+}
+
+/* Previous Button */
+.btn-previous{
+    padding:10px 25px;
+    border-radius:50px;
+    font-weight:600;
+    font-size:15px;
+    text-decoration:none;
+    color:white;
+    background: linear-gradient(45deg,#087a84,#490577);
+    border:none;
+    transition: all 0.4s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-previous:hover{
+    transform: translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.5);   
+    background: linear-gradient(45deg,#7e4edf45,#271cc875);
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 class="title">Semester 1 Subjects</h1>
+
+    <div class="row g-4">
+
+        <!-- LDP -->
+        <div class="col-md-4">
+            <div class="card subject-card p-4" data-subject="Logic Development Programming">
+                <h4 class="card-title">LDP</h4>
+                <p>Logic Development Programming </p>
+                <div class="button-group">
+                <a href="#" class="btn btn-modern">View Syllabus</a>
+                 <a href="#" class="btn btn-modern">Open Material</a>
+                </div> 
+            </div>
+        </div>
+
+        <!-- BWP -->
+        <div class="col-md-4">
+            <div class="card subject-card p-4" data-subject="Basic Web Programming">
+                <h4 class="card-title">BWP</h4>
+                <p>Basic Web Programming</p>
+                <div class="button-group">
+                <a href="#" class="btn btn-modern">View Syllabus</a>
+                <a href="#" class="btn btn-modern">Open Material</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DA -->
+        <div class="col-md-4">
+            <div class="card subject-card p-4" data-subject="Data Analytics I">
+                <h4 class="card-title">DA</h4>
+                <p>Data Analytics I</p>
+                <div class="button-group">
+                <a href="#" class="btn btn-modern">View Syllabus</a>
+                <a href="#" class="btn btn-modern">Open Material</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COA -->
+        <div class="col-md-4">
+            <div class="card subject-card p-4" data-subject="Computer Organization and Architecture">
+                <h4 class="card-title">COA</h4>
+                <p>Computer Organization and Architecture</p>
+                <div class="button-group">
+                <a href="#" class="btn btn-modern">View Syllabus</a>
+                <a href="#" class="btn btn-modern">Open Material</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CS -->
+        <div class="col-md-4">
+            <div class="card subject-card p-4" data-subject="Communication Skills">
+                <h4 class="card-title">CS</h4>
+                <p>Communication Skills</p>
+                <div class="button-group">
+                <a href="#" class="btn btn-modern">View Syllabus</a>
+                <a href="#" class="btn btn-modern">Open Material</a>
+                </div> 
+            </div>
+        </div>
+
+        <!-- IPL -->
+        <div class="col-md-4">
+            <div class="card subject-card p-4" data-subject="Indian Philosophy for leadership">
+                <h4 class="card-title">IPL</h4>
+                <p>Indian Philosophy for leadership</p>
+                <div class="button-group">
+                <a href="#" class="btn btn-modern">View Syllabus</a>
+                <a href="#" class="btn btn-modern">Open Material</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- OS -->
+        <div class="col-md-4">
+            <div class="card subject-card p-4" data-subject="Operating System   ">
+                <h4 class="card-title">OS</h4>
+                <p>Operating System</p>
+                <div class="button-group">
+                <a href="#" class="btn btn-modern">View Syllabus</a>
+                <a href="#" class="btn btn-modern">Open Material</a>
+                </div> 
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+    <a href="sem webpage.html" class="btn btn-previous">
+        ← Previous
+    </a>
+</div>
+
+    </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    $(".subject-card").click(function(){
+
+        let subjectName = $(this).data("subject");
+
+        $("#modalTitle").text(subjectName);
+
+        $("#modalContent").text("You clicked on " + subjectName + ". Detailed syllabus will be displayed here.");
+
+        var myModal = new bootstrap.Modal(document.getElementById('subjectModal'));
+        myModal.show();
+    });
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Web Programming | BCA Hons</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== Ultra Smooth Animated Gradient Background ===== */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    min-height:100vh;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
+    background-size:400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color:white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== Floating Glass Card (Premium Soft Glow) ===== */
+.glass-card{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 25px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 
+        0 8px 32px rgba(0,0,0,0.4),
+        inset 0 0 15px rgba(255,255,255,0.05);
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 15px 40px rgba(0,0,0,0.6),
+        0 0 25px rgba(0,255,255,0.3);
+}
+
+/* ===== Neon Gradient Unit Buttons ===== */
+.unit-btn{
+    margin:8px;
+    padding:10px 24px;
+    border-radius:50px;
+    font-weight:600;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+    background: linear-gradient(135deg,#00f5ff,#ff00c8);
+    color:white;
+    letter-spacing:0.5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0,255,255,0.5);
+}
+
+.unit-btn:hover{
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(255,0,200,0.8);
+    background: linear-gradient(135deg,#ff00c8,#00f5ff);
+}
+
+/* ===== Glass Table Modern ===== */
+.table-custom{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding:25px;
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.table{
+    color:white;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.table thead{
+    background: linear-gradient(90deg,#ff512f,#dd2476);
+    color:white;
+}
+
+.table td, .table th{
+    vertical-align:middle;
+}
+
+/* ===== Navigation Buttons (Glass Gradient) ===== */
+.btn-nav{
+    padding:12px 28px;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    color:white;
+    background: linear-gradient(45deg,#667eea,#764ba2);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.btn-nav:hover{
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    background: linear-gradient(45deg,#24c6dc,#514a9d);
+}
+
+/* ===== Modern Footer ===== */
+footer{
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding:18px;
+    text-align:center;
+    font-size:14px;
+    letter-spacing:1px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    margin-top:50px;
+}
+
+/* ===== Smooth Fade Animation ===== */
+.fade-in{
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container my-4">
+
+<!-- Header -->
+<div class="glass-card text-center mb-4">
+    <h2 class="fw-bold">Advance Web Programming</h2>
+    <p>BCA (Hons) – Semester II</p>
+    <p><strong>Subject Code:</strong> U32A2AWP | Academic Year: 2024-25</p>
+    <p>Credits: 4 | Lecture: 2 hrs | Practical: 4 hrs | Total Marks: 100</p>
+</div>
+
+<!-- Teaching & Examination Scheme -->
+<div class="glass-card mb-4">
+<h5 class="fw-bold">Teaching & Examination Scheme</h5>
+<ul>
+<li>Lecture: 2 Hours per week</li>
+<li>Practical: 4 Hours per week</li>
+<li>Total Hours: 6</li>
+<li>Theory: CE – 50 | SEE – 50 | Total – 100 Marks</li>
+</ul>
+</div>
+
+<!-- Objective -->
+<div class="glass-card mb-4">
+    <h5 class="fw-bold">Objective</h5>
+    <p>After the completion of the course, students are able to learn Web and HTML concepts and develop websites using different tools. </p>
+</div>
+
+<!-- Pre-requisites -->
+<div class="glass-card mb-4">
+    <h5 class="fw-bold">Pre-requisites</h5>
+    <p>An intermediate knowledge on HTML, JavaScript and CSS.</p>
+</div>
+
+<!-- Course Outcomes -->
+<div class="glass-card mb-4">
+    <h5 class="fw-bold">Course Outcomes (CO)</h5>
+    <ul>
+        <li><strong>CO1:</strong> Understanding the use of JQuery selectors and Animations and Effects in web pages. </li>
+        <li><strong>CO2:</strong> Understand the concept of Responsive web page, Explore different bootstrap layouts and grid systems. </li>
+        <li><strong>CO3:</strong> Create dynamic updating content using css3 and Media Queries.</li>
+        <li><strong>CO4:</strong> Implement modal bootstrap in a web page.</li>
+        <li><strong>CO5:</strong> Understand the fundamentals of JavaScript.</li>
+    </ul>
+</div>
+
+<!-- Units -->
+<div class="glass-card mb-4">
+    <h5 class="fw-bold text-center mb-3">Course Content (Click Unit)</h5>
+
+    <div class="text-center">
+        <button class="unit-btn" onclick="showUnit(1)">Unit 1</button>
+        <button class="unit-btn" onclick="showUnit(2)">Unit 2</button>
+        <button class="unit-btn" onclick="showUnit(3)">Unit 3</button>
+        <button class="unit-btn" onclick="showUnit(4)">Unit 4</button>
+        <button class="unit-btn" onclick="showUnit(5)">Unit 5</button>
+    </div>
+
+    <div id="unitContent" class="mt-4"></div>
+</div>
+
+<!-- CO-PO Mapping Table -->
+<div class="table-custom mb-4">
+    <h5 class="fw-bold">CO-PO Mapping</h5>
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>CO</th>
+                <th>PO1</th><th>PO2</th><th>PO3</th><th>PO4</th>
+                <th>PO5</th><th>PO6</th><th>PO7</th><th>PO8</th>
+                <th>PO9</th><th>PO10</th><th>PO11</th><th>PO12</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>CO1</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td></tr>
+            <tr><td>CO2</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>2</td><td>2</td></tr>
+            <tr><td>CO3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>2</td><td>2</td></tr>
+            <tr><td>CO4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>3</td><td>2</td></tr>
+            <tr><td>CO5</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Practical Content: -->
+<div class="glass-card mb-4">
+    <h5 class="fw-bold">Practical Content</h5>
+    <p>List of programs specified by the subject teacher based on above mentioned topics. </p>
+</div>
+
+<!-- Text Books-->
+<div class="glass-card mb-4">
+    <h5 class="fw-bold">Text Books</h5>
+    <p>Introduction to Internet and HTML Scripting , Bhaumik Shroff
+       HTML5 & CSS3 by Brain P. Hogan
+       Beginning Jquery by Jack Franklin, Apress
+    </p>
+</div>
+
+<!--Reference Books-->
+<div class="glass-card mb-4">
+    <h5 class="fw-bold">Reference Books</h5>
+    <p>SAMS Teach Yourself HTML in 24 hours, Techmedia <br>
+       The complete reference web design Thomas a. Powell, TATA McGraw -Hill, Second Edition <br>
+       Bootstrap in 24 Hours, Sams Teach Yourself <br>
+    </p>
+</div>
+
+
+<!-- Navigation -->
+<div class="d-flex justify-content-between">
+    <a href="Sem 2 sub.html" class="btn-nav">← Previous</a>
+    <a href="#" class="btn-nav">Open Full Course →</a>
+</div>
+
+</div>
+
+<footer>
+© 2024-25 BCA Hons | Advance Web Programming
+</footer>
+
+<script>
+
+const units = {
+1: "JQuery basics, syntax, selectors, event methods, animations, fading, sliding, custom effects. (06 Hrs)",
+2: "CSS3 backgrounds, text effects, pseudo classes, multi-column layout, animation, media queries. (06 Hrs)",
+3: "Responsive Web Design, Bootstrap framework, grid system, containers, typography. (06 Hrs)",
+4: "Bootstrap components: Colors, tables, forms, navbar, alerts, buttons, collapse, tooltip, progress bars. (06 Hrs)",
+5: "JavaScript: Conditional statements, loops, functions, form validation. (06 Hrs)"
+};
+
+function showUnit(num){
+document.getElementById("unitContent").innerHTML =
+`<div class="alert alert-info text-dark">
+<h6><strong>Unit ${num} Content:</strong></h6>
+<p>${units[num]}</p>
+</div>`;
+}
+
+</script>
+
+</body>
+</html>

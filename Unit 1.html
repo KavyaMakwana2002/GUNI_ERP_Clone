@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background: linear-gradient(120deg,#ff7eb3,#7afcff,#7b2ff7);
+    background-size:300% 300%;
+    animation:bgMove 10s ease infinite;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius:16px;
+    padding:40px;
+    width:90%;
+    max-width:520px;
+    text-align:center;
+    color:white;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+h1{
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+h2{
+    margin-bottom:20px;
+    font-weight:400;
+}
+
+h4{
+    margin:8px 0;
+    transition:0.3s;
+}
+
+h4:hover{
+    transform:translateX(5px);
+    color:#ffe082;
+}
+
+button{
+    margin-top:20px;
+    padding:9px 30px;
+    border:none;
+    border-radius:30px;
+    background: linear-gradient(45deg,#ff512f,#dd2476);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+
+
+/* Link reset */
+.material-link{
+  text-decoration:none;
+}
+
+/* Button style */
+.open-btn{
+  padding:14px 28px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  background: linear-gradient(45deg,#ff6f4b,#4b0401);
+  color:white;
+  cursor:pointer;
+  transition: all 0.3s ease;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+.open-btn:hover{
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Click effect */
+.open-btn:active{
+  transform: scale(0.95);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Unit 1: Vocabulary and Grammar</h1>
+<h2>— Topics —</h2>
+
+<a href="Collocations More Examples.pdf"><button type="button" class="btn btn-link"><h4>Collocations</h4></button></a><br>
+<a href="Collocations_Idioms-Phrases_Homophones-Homonyms.pdf"><button type="button" class="btn btn-link"><h4>Phrases and Idioms & Homophones - Homonyms</h4></button></a><br>
+<a href="#"><button type="button" class="btn btn-link"><h4>Modal Auxiliary Verbs</h4></button></a><br>
+<a href="TYPES OF SENTENCES_EWS_SEM-II.pdf"><button type="button" class="btn btn-link"><h4>Types of Sentences</h4></button></a><br>
+<a href="Tense & Active-Passive..pdf"><button type="button" class="btn btn-link"><h4>Active - Passive Voice</h4></button></a><br>
+
+<a href="Unit 1 Full Material.html" class="material-link">
+  <button class="open-btn">Full Material</button>
+</a>
+</div>
+
+</body>
+</html>

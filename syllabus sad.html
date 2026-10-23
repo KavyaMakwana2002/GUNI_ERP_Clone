@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Analysis and Design | BCA Hons</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== Premium Animated Background ===== */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    min-height:100vh;
+    background: linear-gradient(-45deg,#141e30,#243b55,#0f2027,#2c5364);
+    background-size:400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color:white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== Smooth Fade In ===== */
+.container{
+    animation: fadePage 1.2s ease-in-out;
+}
+
+@keyframes fadePage{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== Glass Cards ===== */
+.section-card{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border-radius: 25px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+}
+
+.section-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.6);
+}
+
+/* ===== Header ===== */
+.header-box{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 35px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== Neon Unit Buttons ===== */
+.unit-btn{
+    margin:8px;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    background: linear-gradient(45deg,#00c6ff,#0072ff);
+    border: none;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0,114,255,0.6);
+}
+
+.unit-btn:hover{
+    transform: scale(1.12);
+    box-shadow: 0 0 25px rgba(0,198,255,1);
+}
+
+/* ===== Table Styling ===== */
+.table-custom{
+    background: rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:25px;
+    backdrop-filter: blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.table{
+    color:white;
+}
+
+.table thead{
+    background: rgba(0,0,0,0.5);
+}
+
+.table td, .table th{
+    vertical-align: middle;
+}
+
+/* ===== Modern Navigation Buttons ===== */
+.btn-nav{
+    padding: 12px 28px;
+    border-radius: 50px;
+    background: linear-gradient(45deg,#ff416c,#ff4b2b);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition: all 0.4s ease;
+    box-shadow:0 0 15px rgba(255,75,43,0.7);
+}
+
+.btn-nav:hover{
+    transform: scale(1.1) translateY(-3px);
+    box-shadow:0 0 25px rgba(255,75,43,1);
+}
+
+/* ===== Alert Box ===== */
+.alert{
+    border-radius:20px;
+    animation: fadeUnit 0.5s ease-in-out;
+}
+
+@keyframes fadeUnit{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== Footer ===== */
+footer{
+    background: rgba(0,0,0,0.7);
+    padding:18px;
+    text-align:center;
+    margin-top:50px;
+    backdrop-filter: blur(10px);
+    font-weight:500;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container my-4">
+
+<div class="header-box mb-4">
+<h2 class="fw-bold">Software Analysis and Design</h2>
+<p>BCA (Hons) – Semester II</p>
+<p>Subject Code: U32B3SAD | Credits: 4</p>
+<p>Academic Year: 2024-25</p>
+</div>
+
+<!-- Teaching Scheme -->
+<div class="section-card mb-4">
+<h5 class="fw-bold">Teaching & Examination Scheme</h5>
+<ul>
+<li>Lecture Hours: 4 per week</li>
+<li>Credits: 4</li>
+<li>Continuous Evaluation (CE): 50 Marks</li>
+<li>Semester End Exam (SEE): 50 Marks</li>
+<li>Total: 100 Marks</li>
+</ul>
+</div>
+
+<!-- Objective -->
+<div class="section-card mb-4">
+<h5 class="fw-bold">Objective</h5>
+<p>Students will be able to comprehend various software process models, the software engineering
+development process, UML diagrams, project planning, project scheduling, and software risk
+analysis at the end of the course
+</p>
+</div>
+
+<!-- Pre-requisites -->
+<div class="section-card mb-4">
+<h5 class="fw-bold">Pre-requisites</h5>
+<p>The fundamentals of how software is developed should be well understood by the students.</p>
+</div>
+
+<!-- Course Outcomes -->
+<div class="section-card mb-4">
+<h5 class="fw-bold">Course Outcomes</h5>
+<ul>
+<li><strong>CO1:</strong> Gain a comprehensive understanding of software engineering principles, focusing on systematic analysis, design, Software Development Life Cycle phases, and effective Requirements Engineering. </li>
+<li><strong>CO2:</strong> Design and analyze systems using OOAD principles and Solve real-world problems through case studies.</li>
+<li><strong>CO3:</strong> Understand the principles of software architecture, Analyze and design software systems with a focus on architectural patterns.</li>
+<li><strong>CO4:</strong> Analyze case studies to identify testing and QA best practices.</li>
+<li><strong>CO5:</strong> Understanding project management principles, creating project plans and estimates for software projects, and identifying and managing risks in such projects.</li>
+</ul>
+</div>
+
+<!-- Units -->
+<div class="section-card mb-4">
+<h5 class="fw-bold mb-3">Course Content (Click Unit)</h5>
+
+<div class="text-center">
+<button class="unit-btn" onclick="showUnit(1)">Unit 1</button>
+<button class="unit-btn" onclick="showUnit(2)">Unit 2</button>
+<button class="unit-btn" onclick="showUnit(3)">Unit 3</button>
+<button class="unit-btn" onclick="showUnit(4)">Unit 4</button>
+<button class="unit-btn" onclick="showUnit(5)">Unit 5</button>
+</div>
+
+<div id="unitContent" class="mt-4"></div>
+</div>
+
+<!-- CO-PO Mapping -->
+<div class="table-custom mb-4">
+<h5 class="fw-bold">CO-PO Mapping</h5>
+<table class="table table-bordered text-center">
+<thead>
+<tr>
+<th>CO</th>
+<th>PO1</th><th>PO2</th><th>PO3</th><th>PO4</th>
+<th>PO5</th><th>PO6</th><th>PO7</th><th>PO8</th>
+<th>PO9</th><th>PO10</th><th>PO11</th><th>PO12</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>CO1</td><td>3</td><td>3</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>3</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>CO2</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>3</td><td>1</td><td>0</td><td>2</td><td>1</td></tr>
+<tr><td>CO3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>1</td><td>0</td><td>3</td><td>2</td></tr>
+<tr><td>CO4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>1</td><td>0</td><td>3</td><td>2</td></tr>
+<tr><td>CO5</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>1</td><td>0</td><td>3</td><td>2</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Text Books -->
+<div class="section-card mb-4">
+    <h5 class="fw-bold">Text Books</h5>
+    <p>
+        <ul>
+        <li>"Software Engineering: A Practitioner's Approach" by Roger S. Pressman</li>
+        </ul>
+    </p>
+</div>
+
+<!-- Reference Books -->
+<div class="section-card mb-4">
+    <h5 class="fw-bold">Reference Books</h5>
+    <p>
+        <ul>
+        <li>"Requirements Engineering: Fundamentals, Principles, and Techniques" by Klaus Pohl and Chris Rupp</li>
+        <li>"Object-Oriented Analysis and Design with Applications" by Grady Booch, Robert A. Maksimchuk, Michael W. Engle</li>
+        <li>"UML Distilled: A Brief Guide to the Standard Object Modeling Language" by Martin Fowler</li>
+        <li>"Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides</li>
+        <li>"Software Architecture in Practice" by Len Bass, Paul Clements, Rick Kazman</li>
+        <li>"Foundations of Software Testing" by Dorothy Graham, Erik Van Veenendaal, Isabel Evans</li>
+        <li>“Effective Software Test Automation" by Kanglin Li</li>
+        <li>"Software Engineering: A Practitioner's Approach" by Roger S. Pressman</li>
+        <li>"Agile Estimating and Planning" by Mike Cohn</li>
+        </ul>
+    </p>
+</div>
+
+
+<div class="d-flex justify-content-between mt-4">
+<a href="Sem 2 sub.html" class="btn-nav">← Previous</a>
+<a href="#" class="btn-nav">Open Full Course →</a>
+</div>
+
+</div>
+
+<footer>
+© 2024-25 BCA Hons | Software Analysis and Design
+</footer>
+
+<script>
+const units = {
+1: "Introduction to Software Engineering, SDLC, Requirements Engineering. (12 Hours)",
+2: "Object-Oriented Analysis & Design, UML, Case Studies. (12 Hours)",
+3: "Design Patterns, Software Architecture, Architectural Patterns. (12 Hours)",
+4: "Software Testing, QA, Testing Techniques & Tools. (12 Hours)",
+5: "Project Planning, Estimation, Risk Management, Agile. (12 Hours)"
+};
+
+function showUnit(num){
+document.getElementById("unitContent").innerHTML = `
+<div class="alert alert-info bg-light text-dark">
+<h6><strong>Unit ${num} Content:</strong></h6>
+<p>${units[num]}</p>
+</div>
+`;
+}
+</script>
+
+</body>
+</html>

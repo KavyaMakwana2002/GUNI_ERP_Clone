@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logic Development with Programming – II | BCA Hons</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== Ultra Modern Animated Background ===== */
+body{
+    background: linear-gradient(135deg,#141e30,#243b55,#0f2027,#1c92d2);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+@keyframes gradientFlow{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== Floating Glow Effect ===== */
+body::before{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,rgba(0,255,255,0.4),transparent 70%);
+    top:-100px;
+    left:-100px;
+    animation: floatGlow 8s infinite alternate ease-in-out;
+    z-index:-1;
+}
+
+@keyframes floatGlow{
+    from{transform:translateY(0px);}
+    to{transform:translateY(80px);}
+}
+
+/* ===== Premium Glass Card ===== */
+.glass-card{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 30px;
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    margin-bottom:30px;
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* ===== Modern Header ===== */
+.header-box{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 30px;
+    padding: 40px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+    animation: fadeSlide 1s ease;
+}
+
+@keyframes fadeSlide{
+    from{opacity:0; transform:translateY(-30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== Neon Unit Button ===== */
+.unit-btn{
+    margin:8px;
+    padding:10px 24px;
+    border-radius:50px;
+    border:none;
+    font-weight:600;
+    font-size:15px;
+    background:linear-gradient(45deg,#ff00cc,#3333ff);
+    color:white;
+    transition:0.4s ease;
+    box-shadow:0 0 15px rgba(255,0,204,0.6);
+}
+
+.unit-btn:hover{
+    transform:scale(1.15);
+    box-shadow:0 0 25px rgba(51,51,255,0.9);
+}
+
+/* ===== Advanced Table Styling ===== */
+.table-custom{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.table{
+    color:white;
+}
+
+.table thead{
+    background: linear-gradient(45deg,#ff512f,#dd2476);
+    color:white;
+}
+
+.table tbody tr:hover{
+    background: rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+/* ===== Alert Box Animation ===== */
+.alert-custom{
+    background: rgba(0,255,255,0.15);
+    border:none;
+    border-radius:20px;
+    padding:20px;
+    color:white;
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* ===== Navigation Buttons ===== */
+.btn-nav{
+    padding:12px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    background:linear-gradient(45deg,#00f260,#0575e6);
+    color:white;
+    transition:0.4s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.btn-nav:hover{
+    transform:translateY(-5px) scale(1.08);
+    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* ===== Premium Footer ===== */
+footer{
+    background: rgba(0,0,0,0.7);
+    padding:18px;
+    text-align:center;
+    font-weight:500;
+    backdrop-filter: blur(10px);
+    margin-top:50px;
+    letter-spacing:1px;
+}
+
+/* ===== Smooth Scroll ===== */
+html{
+    scroll-behavior: smooth;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container my-4">
+
+<!-- Header -->
+<div class="header-box mb-4">
+<h2 class="fw-bold">Logic Development with Programming – II</h2>
+<p>BCA (Hons) – Semester II</p>
+<p>Subject Code: U32A1LDP | Academic Year: 2024-25</p>
+<p>Credits: 4 (L-2, P-2)</p>
+</div>
+
+<!-- Teaching & Examination Scheme -->
+<div class="glass-card">
+<h5 class="fw-bold">Teaching & Examination Scheme</h5>
+<ul>
+<li>Lecture: 2 Hours per week</li>
+<li>Practical: 4 Hours per week</li>
+<li>Total Hours: 6</li>
+<li>Theory: CE – 50 | SEE – 50 | Total – 100 Marks</li>
+</ul>
+</div>
+
+<!-- Objective -->
+<div class="glass-card">
+<h5 class="fw-bold">Objective</h5>
+<p>
+By the completion of this course, students will be able to implement, test, debug, and document
+programs, Program with pointers and arrays, perform pointer arithmetic, and use the
+preprocessor, Understand how to write and use functions, how the stack is used to implement
+function calls, and parameter passing options, Understand and use the common data structures
+typically found in C programs — namely arrays, strings, lists, trees, and hash tables.
+</p>
+</div>
+
+<!-- Pre-requisite -->
+<div class="glass-card">
+<h5 class="fw-bold">Pre-requisites</h5>
+<p>Need to know about the basics of the C programming language. Students need to understand the
+basic concepts like data type, variable, constant, control statement with structure of
+programming language need to understand before going for advanced concepts.
+</p>
+</div>
+
+<!-- Course Outcomes -->
+<div class="glass-card">
+<h5 class="fw-bold">Course Outcomes (CO)</h5>
+<ul>
+<li><strong>CO1:</strong> Design, implement, test and debug programs that use arrays. </li>
+<li><strong>CO2:</strong> Design, implement, test and debug programs that use character strings arrays and that use pointers for character strings. </li>
+<li><strong>CO3:</strong> Design, implement, test and debug programs that use functions. </li>
+<li><strong>CO4:</strong> Implement test and Store different data types in the same memory.</li>
+<li><strong>CO5:</strong> Analyze programming problems to choose when regular loops should be used and when recursion will produce a better program. </li>
+</ul>
+</div>
+
+<!-- Units -->
+<div class="glass-card">
+<h5 class="fw-bold text-center mb-3">Course Content (Click Unit)</h5>
+
+<div class="text-center">
+<button class="unit-btn" onclick="showUnit(1)">Unit 1</button>
+<button class="unit-btn" onclick="showUnit(2)">Unit 2</button>
+<button class="unit-btn" onclick="showUnit(3)">Unit 3</button>
+<button class="unit-btn" onclick="showUnit(4)">Unit 4</button>
+<button class="unit-btn" onclick="showUnit(5)">Unit 5</button>
+</div>
+
+<div id="unitContent" class="mt-4"></div>
+
+</div>
+
+<!-- CO-PO Mapping -->
+<div class="table-custom mb-4">
+<h5 class="fw-bold">CO-PO Mapping</h5>
+<table class="table table-bordered text-center">
+<thead>
+<tr>
+<th>CO</th>
+<th>PO1</th><th>PO2</th><th>PO3</th><th>PO4</th>
+<th>PO5</th><th>PO6</th><th>PO7</th><th>PO8</th>
+<th>PO9</th><th>PO10</th><th>PO11</th><th>PO12</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>CO1</td><td>3</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>CO2</td><td>2</td><td>2</td><td>3</td><td>2</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>CO3</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>CO4</td><td>3</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>CO5</td><td>2</td><td>2</td><td>3</td><td>2</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Navigation -->
+<div class="d-flex justify-content-between mt-4">
+<a href="Sem 2 sub.html" class="btn-nav">← Previous</a>
+<a href="#" class="btn-nav"> Open Full Course →</a>
+</div>
+
+</div>
+
+<footer>
+© 2024-25 BCA Hons | Logic Development with Programming – II
+</footer>
+
+<script>
+
+const units = {
+1: "Arrays: One-dimensional, Two-dimensional, Multidimensional arrays, Initialization, Overflow & Underflow. (6 Hours)",
+2: "Character Arrays & Strings: String handling functions – strcpy(), strcmp(), strcat(), strlen(). (6 Hours)",
+3: "User Defined Functions: Categories, Recursion, Scope, Lifetime of variables. (6 Hours)",
+4: "Structures & Unions: Arrays of structures, Nested structures, Structure with functions. (6 Hours)",
+5: "Pointers: Pointer arithmetic, Pointers with arrays, strings, functions and structures. (6 Hours)"
+};
+
+function showUnit(num){
+document.getElementById("unitContent").innerHTML = `
+<div class="alert alert-custom">
+<h6><strong>Unit ${num} Content:</strong></h6>
+<p>${units[num]}</p>
+</div>
+`;
+}
+
+</script>
+
+</body>
+</html>

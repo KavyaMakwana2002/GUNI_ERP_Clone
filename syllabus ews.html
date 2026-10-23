@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effective Writing Skills | BCA Hons</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ===== Modern Animated Background ===== */
+body{
+    background: linear-gradient(-45deg, #667eea, #764ba2, #6dd5ed, #2193b0);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ===== Glass Header ===== */
+.header-box{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+/* ===== Glass Cards ===== */
+.section-card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+.section-card:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ===== Unit Buttons ===== */
+.unit-btn{
+    margin:6px;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 600;
+    background: linear-gradient(45deg,#ff6a00,#ee0979);
+    border: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.unit-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* ===== Table Styling ===== */
+.table-custom{
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius:20px;
+    padding:20px;
+    color:white;
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+.table{
+    color:white;
+}
+
+.table thead{
+    background: rgba(0,0,0,0.3);
+}
+
+.table td, .table th{
+    vertical-align: middle;
+}
+
+/* ===== Alert Styling ===== */
+.alert-info{
+    background: rgba(255,255,255,0.25);
+    border:none;
+    color:white;
+    border-radius:15px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform: translateY(10px);}
+    to{opacity:1; transform: translateY(0);}
+}
+
+/* ===== Footer ===== */
+footer{
+    background: rgba(0,0,0,0.6);
+    color:white;
+    padding:15px;
+    text-align:center;
+    backdrop-filter: blur(10px);
+    margin-top:40px;
+    font-weight:500;
+}
+
+/* ===== Container Alignment ===== */
+.next-container{
+    text-align: right;   /* Right side */
+    margin-top: 30px;
+}
+
+/* ===== Fade In Animation ===== */
+.fade-in{
+    animation: fadeInBtn 1s ease-in-out;
+}
+
+@keyframes fadeInBtn{
+    from{
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Modern Glass Button ===== */
+.btn-nav{
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #5f2fff, #dd24a9);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Hover Effect */
+.btn-nav:hover{
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    background: linear-gradient(45deg, #24c6dc, #514a9d);
+}
+
+/* Click Effect */
+.btn-nav:active{
+    transform: scale(0.95);
+}
+
+.next-container{
+    text-align: right;
+    margin-top: 30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container my-4">
+
+    <!-- Header -->
+    <div class="header-box text-center mb-4">
+        <h2 class="fw-bold">Effective Writing Skills</h2>
+        <p>BCA (Hons) – Semester II | Subject Code: U32D5EWS</p>
+        <p>Academic Year: 2024-25</p>
+    </div>
+
+    <!-- Teaching & Examination Scheme -->
+    <div class="card section-card p-3 mb-4">
+        <h5 class="fw-bold">Teaching & Examination Scheme</h5>
+        <ul>
+            <li>Lecture Hours: 2 per week</li>
+            <li>Credits: 2</li>
+            <li>Continuous Evaluation (CE): 25 Marks</li>
+            <li>Semester End Exam (SEE): 25 Marks</li>
+            <li>Total: 50 Marks</li>
+        </ul>
+    </div>
+
+    <!-- Objectives -->
+    <div class="card section-card p-3 mb-4">
+        <h5 class="fw-bold">Objective</h5>
+        <p>
+            Understand the role of communication in personal & professional success.
+            Develop awareness of appropriate communication strategies.
+            Prepare and present messages with specific intent.
+            Analyze communication acts and ethically integrate sources.
+        </p>
+    </div>
+
+    <!--Pre-requisites-->
+
+    <div class="card section-card p-3 mb-4">
+        <h5 class="fw-bold">Pre-requisites</h5>
+        <p>
+           Familiarity with the basics of English language, strong determination and willpower for skill-set enhancement.
+
+        </p>
+    </div>
+
+    <!-- Learning Outcomes -->
+    <div class="card section-card p-3 mb-4">
+        <h5 class="fw-bold">Course Outcomes (CO)</h5>
+        <ul>
+            <li><strong>CO1:</strong> Understand and apply complex vocabulary and grammar structures</li>
+            <li><strong>CO2:</strong> Understand and analyze various nuances of writing</li>
+            <li><strong>CO3:</strong> Understand and evaluate different forms of formal writing and produce effective writing</li>
+            <li><strong>CO4:</strong> Understand, analyze and create social media writing</li>
+            <li><strong>CO5:</strong> Apply knowledge of communication skills and produce effective responses</li>
+        </ul>
+    </div>
+
+    <!-- Units Section -->
+    <div class="card section-card p-3 mb-4">
+        <h5 class="fw-bold mb-3">Course Content (Click Unit)</h5>
+
+      
+
+        <div class="text-center">
+            <button class="btn btn-primary unit-btn" onclick="showUnit(1)">Unit 1</button>
+            <button class="btn btn-primary unit-btn" onclick="showUnit(2)">Unit 2</button>
+            <button class="btn btn-primary unit-btn" onclick="showUnit(3)">Unit 3</button>
+            <button class="btn btn-primary unit-btn" onclick="showUnit(4)">Unit 4</button>
+            <button class="btn btn-primary unit-btn" onclick="showUnit(5)">Unit 5</button>
+        </div>
+
+    
+
+        <div id="unitContent" class="mt-4"></div>
+    </div>
+
+    <!-- CO-PO Mapping Table -->
+    <div class="table-custom p-3 mb-4">
+        <h5 class="fw-bold">CO-PO Mapping</h5>
+        <table class="table table-bordered text-center">
+            <thead class="table-primary">
+                <tr>
+                    <th>CO</th>
+                    <th>PO1</th><th>PO2</th><th>PO3</th><th>PO4</th>
+                    <th>PO5</th><th>PO6</th><th>PO7</th><th>PO8</th>
+                    <th>PO9</th><th>PO10</th><th>PO11</th><th>PO12</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>CO1</td><td>1</td><td>2</td><td>0</td><td>2</td><td>0</td><td>1</td><td>1</td><td>2</td><td>3</td><td>1</td><td>0</td><td>0</td></tr>
+                <tr><td>CO2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>0</td><td>0</td></tr>
+                <tr><td>CO3</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>2</td><td>3</td><td>2</td><td>2</td><td>1</td></tr>
+                <tr><td>CO4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>3</td><td>2</td><td>0</td></tr>
+                <tr><td>CO5</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td><td>3</td><td>3</td><td>2</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- References -->
+    <div class="card section-card p-3 mb-4">
+        <h5 class="fw-bold">Reference Books</h5>
+        <ul>
+            <li>Technical Communication - Principles and Practice by Meenakshi Raman & Sangeeta Sharma (Oxford University Press) </li>
+            <li>Kumar, Sanjay, Lata Pushp, 2015. Communication Skills. Oxford University Press, New Delhi </li>
+            <li>Suresh Kumar, E, 2012. Communication Skills and Soft Skills. Pearson, New Delhi</li>
+            <li>A Communicative Grammar of English by Geoffery Leech and Fan Svartvik (Pearson Longman) </li>
+        </ul>
+    </div>
+
+    <!--Web Reference:-->
+
+    <div class="card section-card p-3 mb-4">
+        <h5 class="fw-bold">Web Reference</h5>
+        <p>
+          Online resources: YouTube - Daily Video Vocabulary, Vocab 24, TED Lectures, Inspirational
+          speeches/addresses of successful people, parliamentary speeches, interviews, various
+          internet channels devoted to learning and improving communication in English
+        </p>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-4 fade-in">
+
+    <!-- Previous Button (Left Side) -->
+    <a href="Sem 2 sub.html" class="btn-nav">
+        ← Previous
+    </a>
+
+    <!-- Next Button (Right Side) -->
+    <a href="UNITS all ews.html" class="btn-nav">
+        Open Full Course →
+    </a>
+
+</div>
+
+</div>
+
+<footer>
+© 2024-25 BCA Hons | Effective Writing Skills
+</footer>
+
+<script>
+const units = {
+    1: "Collocations, Phrases & Idioms, Homophones, Modal Verbs, Types of Sentences, Active-Passive Voice.",
+    2: "Cs of Effective Writing, Formal Letters, E=A+I Concept, Email Writing.",
+    3: "Paragraph Writing, Agenda, Minutes of Meeting, Notice Writing.",
+    4: "Blog Writing, Social Media Writing, Tweet Writing.",
+    5: "Website Content Analysis, Summary Writing, Social Media Response Writing."
+};
+
+function showUnit(num){
+    document.getElementById("unitContent").innerHTML = `
+        <div class="alert alert-info">
+            <h6><strong>Unit ${num} Content:</strong></h6>
+            <p>${units[num]}</p>
+            <p><strong>Hours:</strong> 06</p>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCA Hons | Premium Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#7c3aed;
+    --secondary:#06b6d4;
+    --dark:#0b1120;
+}
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1f1c2c);
+    background-size: 400% 400%;
+    animation: aurora 15s ease infinite;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Gradient */
+@keyframes aurora{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Soft Moving Light Overlay */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background: radial-gradient(circle at 20% 30%, rgba(124,58,237,0.4), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(6,182,212,0.4), transparent 40%);
+    animation: moveLights 12s ease-in-out infinite alternate;
+    z-index:-1;
+}
+
+@keyframes moveLights{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(40px,60px);}
+}
+
+/* Glow Background */
+body::before, body::after{
+    content:'';
+    position:fixed;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+    animation:float 8s infinite alternate ease-in-out;
+}
+body::before{
+    background:var(--primary);
+    top:-100px;
+    left:-100px;
+}
+body::after{
+    background:var(--secondary);
+    bottom:-100px;
+    right:-100px;
+}
+@keyframes float{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(50px);}
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:70px 0 40px 0;
+}
+header h1{
+    font-size:2.7rem;
+    font-weight:800;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Filter */
+.filter-pills{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+.pill{
+    padding:8px 22px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.2);
+    cursor:pointer;
+    transition:0.3s;
+}
+.pill.active, .pill:hover{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    border:none;
+}
+
+/* Grid */
+.sem-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* Card */
+.sem-card{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.4s ease;
+    position:relative;
+}
+.sem-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+.sem-number{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:3rem;
+    font-weight:800;
+    opacity:0.05;
+}
+
+/* Subject Tags */
+.subject-tag{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:8px;
+    background:rgba(255,255,255,0.08);
+    margin:4px;
+    font-size:0.8rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+.subject-tag:hover{
+    background:rgba(255,255,255,0.15);
+}
+.subject-tag:active{
+    transform:scale(0.9);
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+/* Modern Button */
+.btn-modern{
+    margin-top:15px;
+    width:100%;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    border:none;
+    border-radius:10px;
+    padding:10px;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+    position:relative;
+    overflow:hidden;
+}
+.btn-modern:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
+}
+.btn-modern:active{
+    transform:scale(0.95);
+}
+
+/* Ripple Effect */
+.btn-modern span.ripple{
+    position:absolute;
+    border-radius:50%;
+    transform:scale(0);
+    animation:ripple 600ms linear;
+    background:rgba(255,255,255,0.6);
+}
+@keyframes ripple{
+    to{
+        transform:scale(4);
+        opacity:0;
+    }
+}
+
+/* Modal Subject List */
+.subject-item{
+    cursor:pointer;
+    transition:0.3s;
+}
+.subject-item:hover{
+    background:rgba(255,255,255,0.1);
+}
+.subject-item:active{
+    transform:scale(0.97);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:50px 0;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<h1>BCA (Honours) Portal</h1>
+<p class="text-muted">Premium 3D Glass Edition</p>
+</div>
+</header>
+
+<div class="container">
+
+<div class="filter-pills">
+<div class="pill active" onclick="filterYear('all',this)">All</div>
+<div class="pill" onclick="filterYear('1',this)">Year 1</div>
+<div class="pill" onclick="filterYear('2',this)">Year 2</div>
+<div class="pill" onclick="filterYear('3',this)">Year 3</div>
+<div class="pill" onclick="filterYear('4',this)">Year 4</div>
+</div>
+
+<div class="sem-grid" id="semGrid"></div>
+
+</div>
+
+<footer>
+© 2026 AMPICS | Premium UI
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="syllabusModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content bg-dark text-white border-0" style="border-radius:15px; border:1px solid rgba(255,255,255,0.1)!important;">
+<div class="modal-header border-0">
+<h5 class="modal-title" id="modalTitle"></h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body" id="modalBody"></div>
+<div class="modal-footer border-0">
+<a id="downloadBtn" href="#" target="_blank" class="btn btn-modern">
+Show Syllbus
+</a>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* DATA */
+const semesters=[
+{num:1,year:1,subjects:["LDP","BWP","DA","COA","CS","IPL","OS"],link:"Sem 1 sub.html"},
+{num:2,year:1,subjects:["LDP II","DA II","EWS","AWP","SEP","SAD","SS"],link:"Sem 2 sub.html"},
+{num:3,year:2,subjects:["OOP","DFS","DBM","DMS","EES","LBG"],link:"Sem 3 sub.html"},
+{num:4,year:2,subjects:["OST","CN","ADB","RP","IPP","EDM","DS","ET"],link:"Sem 4 sub.html"},
+{num:5,year:3,subjects:["FAD","AWT","JD","FCC","NS","SQA","SPM","DSM"],link:"Sem 5 sub.html"},
+{num:6,year:3,subjects:["NJD","DA III","ITU","ICS","LPD","SDP 1"],link:"Sem 6 sub.html"},
+{num:7,year:4,subjects:[],link:"Sem 7 sub.html"},
+{num:8,year:4,subjects:[],link:"Sem 8 sub.html"}
+];
+
+/* Render */
+function render(data){
+const grid=document.getElementById("semGrid");
+grid.innerHTML=data.map(s=>`
+<div class="sem-card">
+<div class="sem-number">${s.num}</div>
+<h4 class="fw-bold">Semester ${s.num}</h4>
+<div>
+${s.subjects.map(sub=>`<span class="subject-tag">${sub}</span>`).join('')}
+</div>
+<button class="btn btn-modern" onclick="openSyllabus(${s.num})">
+View Syllabus
+</button>
+</div>
+`).join('');
+}
+
+/* Filter */
+function filterYear(year,el){
+document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+el.classList.add('active');
+if(year==='all') render(semesters);
+else render(semesters.filter(s=>s.year==year));
+}
+
+/* Modal */
+function openSyllabus(semNumber){
+const semester=semesters.find(s=>s.num===semNumber);
+
+document.getElementById("modalTitle").innerText="Semester "+semNumber+" Subjects";
+
+document.getElementById("modalBody").innerHTML=
+"<ul class='list-group list-group-flush'>"+
+semester.subjects.map(sub=>
+"<li class='list-group-item bg-transparent text-white border-secondary subject-item'>"+sub+"</li>"
+).join('')+
+"</ul>";
+
+document.getElementById("downloadBtn").href=semester.link;
+
+new bootstrap.Modal(document.getElementById('syllabusModal')).show();
+}
+
+/* Ripple Effect */
+document.addEventListener("click", function(e){
+if(e.target.classList.contains("btn-modern")){
+const button = e.target;
+const circle = document.createElement("span");
+const diameter = Math.max(button.clientWidth, button.clientHeight);
+const radius = diameter / 2;
+
+circle.style.width = circle.style.height = `${diameter}px`;
+circle.style.left = `${e.offsetX - radius}px`;
+circle.style.top = `${e.offsetY - radius}px`;
+circle.classList.add("ripple");
+
+const ripple = button.getElementsByClassName("ripple")[0];
+if (ripple) ripple.remove();
+
+button.appendChild(circle);
+}
+});
+
+/* Init */
+render(semesters);
+
+</script>
+
+</body>
+</html>

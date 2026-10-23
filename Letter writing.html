@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Letter Drafter - Gemini Edition</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .letter-preview {
+            background: white;
+            padding: 50px;
+            min-height: 800px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .letter-head { text-align: center; border-bottom: 2px solid #333; margin-bottom: 20px; padding-bottom: 10px; }
+        .confidential { font-weight: bold; text-decoration: underline; margin-bottom: 10px; }
+        .subject-line { font-weight: bold; margin: 15px 0; }
+        .sidebar { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        @media print { .no-print { display: none; } .letter-preview { box-shadow: none; border: none; } }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-4 no-print">
+            <div class="sidebar">
+                <h4 class="mb-4">Letter Details</h4>
+                <div class="mb-3">
+                    <label class="form-label">Letter Type</label>
+                    <select id="letterType" class="form-select" onchange="updateTemplate()">
+                        <option value="inquiry">Letter of Inquiry</option>
+                        <option value="complaint">Letter of Complaint</option>
+                        <option value="adjustment">Letter of Adjustment</option>
+                    </select>
+                </div>
+                <hr>
+                <div class="mb-3">
+                    <label class="form-label">Your Company Name</label>
+                    <input type="text" id="senderName" class="form-control" value="Jewellery Shop" oninput="render()">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Receiver Designation</label>
+                    <input type="text" id="receiverRole" class="form-control" value="Customer" oninput="render()">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Subject</label>
+                    <input type="text" id="subject" class="form-control" value="Inquiry for Antic Ornaments" oninput="render()">
+                </div>
+                <button class="btn btn-primary w-100 mt-3" onclick="window.print()">Print Letter (A4)</button>
+                <p class="text-muted mt-3 small">Follows the $E=A+I$ formula [Source: Page 2].</p>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="letter-preview" id="letterOutput">
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateTemplate() {
+        const type = document.getElementById('letterType').value;
+        const subInput = document.getElementById('subject');
+        
+        if(type === 'complaint') {
+            subInput.value = "Complaint for defective and damaged articles";
+        } else if(type === 'adjustment') {
+            subInput.value = "Adjustment to the complaint dated Jan 18";
+        } else {
+            subInput.value = "Inquiry for bulk purchase of K2 Tablets";
+        }
+        render();
+    }
+
+    function render() {
+        const type = document.getElementById('letterType').value;
+        const sender = document.getElementById('senderName').value;
+        const receiver = document.getElementById('receiverRole').value;
+        const subject = document.getElementById('subject').value;
+        const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+        let bodyContent = "";
+
+        // logic based on "Tips for drafting" [Source: Page 5-6]
+        if(type === 'inquiry') {
+    bodyContent = `<p>We own a prestigious showroom named '${sender}' specializing in heritage jewelry. We have been successfully meeting the aesthetic needs of our elite clientele for over a decade and share a healthy rapport in the market[cite: 231, 258].</p>
+                   <p>Your latest collection of 'Gold Antic Ornaments' has caught our attention due to its exquisite craftsmanship[cite: 236]. We are interested in knowing more about the purity standards and wholesale pricing for this range.</p>
+                   <p>I request you to forward the reference material, including the latest jewelry catalogues and price lists, for the desired collection[cite: 199, 261].</p>`;
+} else if(type === 'complaint') {
+    bodyContent = `<p>We thank you for the timely delivery of our order dated 12th January[cite: 343]. However, while scrutinizing the received consignment, certain flaws in the finishing of the Gold Antic Ornaments caught our attention[cite: 343].</p>
+                   <p>Around 50 pieces appear to have minor dents or lack the promised antique polish[cite: 344]. We have no choice but to ask you to replace these faulty articles to maintain our brand's reputation[cite: 347, 379].</p>`;
+} else {
+    // Letter of Adjustment
+    bodyContent = `<p>We have received your letter regarding the damaged Gold Antic Ornaments and sincerely apologize for the trouble caused[cite: 398, 399]. After a rigorous scrutiny, we found that this was a lapse in our quality control and packaging department[cite: 401].</p>
+                   <p>We have already made arrangements for the early replacement of the consignment[cite: 404]. We trust the fresh ornaments will prove satisfactory and will not spoil our long-standing trade relations[cite: 405, 406].</p>`;
+}
+
+        const html = `
+            <div class="letter-head">
+                <h2 class="text-uppercase">${sender}</h2>
+                <p class="mb-1">For a shining tomorrow...</p>
+                <small>Near Khadi Bhandar, Luhar sala, Jam Khambhaliya. | Phone no.: 98242 16100</small>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-6">Ref: ELT/2025/01</div>
+                <div class="col-6 text-end">Date: ${date}</div>
+            </div>
+
+            <div class="confidential">CONFIDENTIAL</div>
+
+            <div class="recipient-address mb-4">
+                To,<br>
+                ${receiver},<br>
+                Antic Ornaments, Jewellery, Jumar(Earrings)<br>
+                Near Khadi Bhandar, Luhar sala, Jam Khambhaliya. 
+            </div>
+
+            <div class="salutation">Dear Sir,</div>
+
+            <div class="subject-line">Sub: ${subject}</div>
+
+            <div class="letter-body">
+                ${bodyContent}
+                <p>We look forward to a mutually benefitting trade alliance.</p>
+                <p>Thank you.</p>
+            </div>
+
+            <div class="signature-block mt-5">
+                Yours faithfully,<br><br><br>
+                <strong>(Authorized Signatory)</strong><br>
+                ${sender}
+            </div>
+        `;
+
+        document.getElementById('letterOutput').innerHTML = html;
+    }
+
+    // Initial Render
+    render();
+</script>
+
+</body>
+</html>
